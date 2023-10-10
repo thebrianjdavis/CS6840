@@ -1,0 +1,49 @@
+def answer_two():
+    #Creates list of features, excluding diabetes_progression_one_year
+    features_to_plot = [col for col in diabetes.columns if col != 'diabetes_progression_one_year']
+    
+    #Sets the number of subplots based on the number of features to plot
+    num_features = len(features_to_plot)
+    num_plots_per_row = 5
+    num_rows = (num_features - 1) // num_plots_per_row + 1
+
+    #Creates a grid of subplots
+    fig, axes = plt.subplots(nrows=num_rows, ncols=num_plots_per_row, figsize=(30, 5 * num_rows))
+
+    #Creates string to hold min/max data
+    scale_data = ""
+
+    #Prints the feature data to the subplots
+    for i, feature in enumerate(features_to_plot):
+        if feature != 'gender':
+            scale_data += feature
+            scale_data += ": "
+            scale_data += str(diabetes[feature].min())
+            scale_data += "-"
+            scale_data += str(diabetes[feature].max())
+            scale_data += "\n"
+        
+        row_idx = i // num_plots_per_row
+        col_idx = i % num_plots_per_row
+        diabetes[feature].hist(ax=axes[row_idx, col_idx], bins=60)
+        axes[row_idx, col_idx].set_title(feature)
+
+    #plt.tight_layout()
+    
+    plt.show()
+
+    #Prints the minimum and maximum values for numerical columns
+    print(scale_data)
+
+    #Create statistics for non-numerical gender column
+    gender_counts = diabetes['gender'].value_counts()
+    
+    #Prints counts for the values in the gender column
+    if 'female' in gender_counts.index:
+        print("female:", gender_counts['female'])
+    if 'male' in gender_counts.index:
+        print("male:", gender_counts['male'])
+
+
+#Run your function in the cell to return the result
+answer_two()
