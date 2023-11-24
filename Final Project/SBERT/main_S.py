@@ -7,11 +7,15 @@ from preprocessing import preprocess_data
 from feature_extraction_S import extract_features
 import logging
 
+# Select dataset
+# dataset = '../Datasets/mini_lyrics_raw.csv'
+dataset = '../Datasets/lyrics_raw.csv'
+
 # Set up the logger
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Load the data
-df = pd.read_csv('../Datasets/mini_lyrics_raw.csv', on_bad_lines='skip')
+df = pd.read_csv(dataset, on_bad_lines='skip')
 
 # Preprocess data
 preprocessed_df = preprocess_data(df)
@@ -27,7 +31,6 @@ X_test_features = extract_features(X_test)
 logging.info("Feature extraction completed.")
 
 # Train SVM classifier with class weights
-class_weights = 'balanced'  # This automatically adjusts weights inversely proportional to class frequencies
 logging.info("Starting model training...")
 svm = SVC(kernel='linear', class_weight='balanced')
 svm.fit(X_train_features, y_train)
