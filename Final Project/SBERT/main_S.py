@@ -8,8 +8,8 @@ from feature_extraction_S import extract_features
 import logging
 
 # Select dataset
-# dataset = '../Datasets/mini_lyrics_raw.csv'
-dataset = '../Datasets/lyrics_raw.csv'
+dataset = '../Datasets/mini_lyrics_raw.csv'
+# dataset = '../Datasets/lyrics_raw.csv'
 
 # Set up the logger
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
