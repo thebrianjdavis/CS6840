@@ -1,0 +1,37 @@
+############ SBERT Classification Report ############
+              precision    recall  f1-score   support
+
+     country       0.58      0.59      0.58       593
+        misc       0.67      0.61      0.64       611
+         pop       0.34      0.29      0.31       615
+         rap       0.63      0.69      0.66       605
+          rb       0.49      0.50      0.49       596
+        rock       0.42      0.46      0.44       580
+
+    accuracy                           0.52      3600
+   macro avg       0.52      0.52      0.52      3600
+weighted avg       0.52      0.52      0.52      3600
+
+############ RoBERTa Classification Report ############
+              precision    recall  f1-score   support
+
+     country       0.61      0.66      0.64       593
+        misc       0.80      0.73      0.76       611
+         pop       0.39      0.34      0.37       615
+         rap       0.70      0.79      0.74       605
+          rb       0.54      0.54      0.54       596
+        rock       0.48      0.48      0.48       580
+
+    accuracy                           0.59      3600
+   macro avg       0.59      0.59      0.59      3600
+weighted avg       0.59      0.59      0.59      3600
+
+############ SBERT Processing Time ############
+Feature Extraction Processing time: 245.822744846344 seconds
+Model Training Processing time: 30.80458903312683 seconds
+Prediction Processing time: 7.017477989196777 seconds
+
+############ RoBERTa Processing Time ############
+Feature Extraction Processing time: 855.820198059082 seconds
+Model Training Processing time: 58.05397582054138 seconds
+Prediction Processing time: 13.19229507446289 seconds
