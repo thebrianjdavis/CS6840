@@ -1,0 +1,142 @@
+################ QUALITATIVE ANALYSIS ###############
+########## SBERT/SVM Classification Report ##########
+              precision    recall  f1-score   support
+
+     country       0.58      0.59      0.58       593
+        misc       0.67      0.61      0.64       611
+         pop       0.34      0.29      0.31       615
+         rap       0.63      0.69      0.66       605
+          rb       0.49      0.50      0.49       596
+        rock       0.42      0.46      0.44       580
+
+    accuracy                           0.52      3600
+   macro avg       0.52      0.52      0.52      3600
+weighted avg       0.52      0.52      0.52      3600
+
+######### RoBERTa/SVM Classification Report #########
+              precision    recall  f1-score   support
+
+     country       0.61      0.66      0.64       593
+        misc       0.80      0.73      0.76       611
+         pop       0.39      0.34      0.37       615
+         rap       0.70      0.79      0.74       605
+          rb       0.54      0.54      0.54       596
+        rock       0.48      0.48      0.48       580
+
+    accuracy                           0.59      3600
+   macro avg       0.59      0.59      0.59      3600
+weighted avg       0.59      0.59      0.59      3600
+
+########## SBERT/LR Classification Report ###########
+              precision    recall  f1-score   support
+
+     country       0.56      0.58      0.57       593
+        misc       0.63      0.63      0.63       611
+         pop       0.34      0.23      0.28       615
+         rap       0.61      0.72      0.66       605
+          rb       0.48      0.50      0.49       596
+        rock       0.42      0.45      0.43       580
+
+    accuracy                           0.52      3600
+   macro avg       0.51      0.52      0.51      3600
+weighted avg       0.51      0.52      0.51      3600
+
+######### RoBERTa/LR Classification Report ##########
+              precision    recall  f1-score   support
+
+     country       0.62      0.66      0.64       593
+        misc       0.79      0.73      0.76       611
+         pop       0.39      0.30      0.34       615
+         rap       0.68      0.80      0.74       605
+          rb       0.53      0.55      0.54       596
+        rock       0.49      0.50      0.50       580
+
+    accuracy                           0.59      3600
+   macro avg       0.58      0.59      0.58      3600
+weighted avg       0.58      0.59      0.59      3600
+
+##### SBERT/Random Forest Classification Report #####
+              precision    recall  f1-score   support
+
+     country       0.50      0.52      0.51       593
+        misc       0.58      0.66      0.62       611
+         pop       0.31      0.21      0.25       615
+         rap       0.56      0.68      0.62       605
+          rb       0.43      0.46      0.45       596
+        rock       0.38      0.35      0.36       580
+
+    accuracy                           0.48      3600
+   macro avg       0.46      0.48      0.47      3600
+weighted avg       0.46      0.48      0.47      3600
+
+#### RoBERTa/Random Forest Classification Report ####
+              precision    recall  f1-score   support
+
+     country       0.57      0.66      0.61       593
+        misc       0.78      0.70      0.73       611
+         pop       0.37      0.27      0.31       615
+         rap       0.66      0.75      0.71       605
+          rb       0.49      0.51      0.50       596
+        rock       0.44      0.46      0.45       580
+
+    accuracy                           0.56      3600
+   macro avg       0.55      0.56      0.55      3600
+weighted avg       0.55      0.56      0.55      3600
+
+########## SBERT/MLP Classification Report ##########
+              precision    recall  f1-score   support
+
+     country       0.50      0.51      0.51       593
+        misc       0.62      0.57      0.59       611
+         pop       0.30      0.28      0.29       615
+         rap       0.60      0.59      0.59       605
+          rb       0.43      0.43      0.43       596
+        rock       0.35      0.39      0.37       580
+
+    accuracy                           0.46      3600
+   macro avg       0.47      0.46      0.46      3600
+weighted avg       0.47      0.46      0.46      3600
+
+######### RoBERTa/MLP Classification Report #########
+              precision    recall  f1-score   support
+
+     country       0.59      0.59      0.59       593
+        misc       0.69      0.67      0.68       611
+         pop       0.31      0.29      0.30       615
+         rap       0.69      0.70      0.69       605
+          rb       0.49      0.45      0.47       596
+        rock       0.39      0.46      0.42       580
+
+    accuracy                           0.53      3600
+   macro avg       0.53      0.53      0.53      3600
+weighted avg       0.53      0.53      0.53      3600
+
+
+################ QUANTITATIVE ANALYSIS ##############
+
+######## Feature Extraction Processing Time #########
+SBERT: 245.37565183639526 seconds
+RoBERTa: 862.1373960971832 seconds
+
+########## Model Training Processing Time ###########
+SBERT/SVM: 31.24558424949646 seconds
+RoBERTa/SVM: 60.021570920944214 seconds
+SBERT/LR: 4.667426109313965 seconds
+RoBERTa/LR: 20.795653104782104 seconds
+SBERT/Random Forest: 17.392783880233765 seconds
+RoBERTa/Random Forest: 25.746185064315796 seconds
+SBERT/MLP: 29.899768114089966 seconds
+RoBERTa/MLP: 37.305761098861694 seconds
+
+############ Prediction Processing Time #############
+SBERT/SVM: 7.25518012046814 seconds
+RoBERTa/SVM: 12.723135948181152 seconds
+SBERT/LR: 0.004662036895751953 seconds
+RoBERTa/LR: 0.004090785980224609 seconds
+SBERT/Random Forest: 0.08066987991333008 seconds
+RoBERTa/Random Forest: 0.07192707061767578 seconds
+SBERT/MLP: 0.004943132400512695 seconds
+RoBERTa/MLP: 0.0042531490325927734 seconds
+
+################## Total Run Time ###################
+TOTAL RUN TIME: 22.0 minutes 35.50223517417908 seconds
